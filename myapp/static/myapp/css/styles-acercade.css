@@ -1,0 +1,265 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar-spec{
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+nav{
+    height: 100px;
+    background: #00000054;
+}
+
+nav li{
+    padding: 0 10px;
+}
+
+.content-nav{
+    padding: 0 180px;
+    height: 100%;
+    width: 100%;
+}
+
+.icons{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #fff;
+    width: 100%;
+}
+
+.icons svg{
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.modal{
+    color: #fff;
+}
+
+.modal-body > div{
+    padding-top: 20px;
+}
+
+img {
+    border-radius: 3%;
+}
+
+.fondo{
+    background-image: url(../img/fondo-acercade.jpg);
+    background-color: #00000091;
+    background-size: cover;
+    background-position: center;
+}
+
+.fotos{
+    flex: 0 0 25%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    gap: 20px;
+    padding: 30px;
+}
+
+.contenedor-1{
+    background-color: #00000091;
+    padding: 80px 180px;
+    color: #fff;
+}
+
+.contenedor-2{
+    background: linear-gradient(to right, rgba(160, 157, 157, 0.9) 0%, rgba(165, 138, 49, 0.6)100%);
+    color: #000;
+    padding: 80px 180px;
+}
+
+.izquierda h2{
+    font-family: 'Times New Roman', serif;
+    font-size: 3.15rem;
+    font-weight: bold;
+    padding-right: 130px;
+}
+
+.izquierda p{
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+
+.preguntas{
+    justify-content: center;
+    align-items: center;
+}
+
+.preguntas h2{
+    font-family: 'Times New Roman', serif;
+    font-size: 3.15rem;
+    font-weight: bold;
+    padding-right: 130px;
+}
+
+.preguntas p{
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+
+.contenedor-1 h2, .contenedor-2 h2{
+    font-family: 'Times New Roman', serif;
+    font-size: 2.15rem;
+    font-weight: bold;
+}
+
+/* FOOTER */
+
+footer{
+    padding: 28px 180px;
+    color: #fff;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+footer .izquierda,
+footer .centro{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .derecha{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+footer a{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+footer a:hover{
+    color: #c0c0c0;
+}
+
+.icons-footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-bottom: 10px;
+}
+
+.icons-footer svg{
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+
+@media screen and (max-width: 1333px){
+    footer{
+        padding: 28px 60px;
+    }
+}
+
+@media screen and (max-width: 1200px){
+    .logo img{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 551px){
+    .fotofooter{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 521px){
+    .foto2{
+        display: none;
+    }
+}
+
+
+
+@media screen and (max-width: 1325px){
+    .foto1{
+        display: none;
+    }
+
+    .foto2{
+        width: 500px;
+    }
+}
+
+@media screen and (max-width: 795px) {
+    .foto3{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 992px){
+    .navbar-spec{
+        background: #212529;
+    }
+
+    .content-nav{
+        padding: 0 40px;
+    }
+
+    footer{
+        padding: 28px 40px;
+    }
+
+    .contenedor-1,
+    .contenedor-2{
+        padding: 80px 40px;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .content-nav{
+        padding: 0 20px;
+    }
+
+    footer{
+        padding: 28px 20px;
+        grid-template-columns: 1fr 1fr;
+    }
+    footer .izquierda,
+    footer .derecha{
+        justify-content: start;
+        align-items: start;
+    }
+
+    .contenedor-1,
+    .contenedor-2{
+        padding: 80px 20px;
+    }
+}
+
+@media screen and (max-width: 576px){
+    .content-nav{
+        padding: 0 10px;
+    }
+
+    footer{
+        padding: 28px 10px;
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    footer .izquierda,
+    footer .derecha{
+        justify-content: center;
+        align-items: center;
+    }
+
+    .contenedor-1,
+    .contenedor-2{
+        padding: 80px 10px;
+    }
+}

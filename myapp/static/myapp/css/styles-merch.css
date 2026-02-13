@@ -1,0 +1,274 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar-spec{
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+nav{
+    height: 100px;
+    background: #00000054;
+}
+
+nav li{
+    padding: 0 10px;
+}
+
+.content-nav{
+    padding: 0 180px;
+    height: 100%;
+    width: 100%;
+}
+
+.icons{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #fff;
+    width: 100%;
+}
+
+.icons svg{
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.modal{
+    color: #fff;
+}
+
+.modal-body > div{
+    padding-top: 20px;
+}
+
+.contenedor{
+    height: 100%;
+}
+
+.content-1{
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.357) 0%, rgba(0, 0, 0, 0.357)100%), url(../img/gif-merch.gif);
+    background-size: cover;
+    background-position: center;
+    padding: 80px 180px;
+    color: #fff;
+}
+
+.content-1 h1{
+    font-family: 'Times New Roman', serif;
+    font-size: 3.6rem;
+    font-weight: bold;
+}
+
+.content-2{
+    height: 100%;
+    padding: 80px 180px;
+    background: linear-gradient(to right, rgba(90, 53, 32, 0.9) 0%, rgba(19, 88, 100, 0.6)100%);
+    color: #fff;
+    position: relative; /* Asegura que el posicionamiento absoluto se base en este contenedor */
+}
+
+.plush{
+    margin-bottom: 0;
+}
+
+.pagina p{
+    font-size: 1.25rem;
+}
+
+.pagina{
+    margin-bottom: 100px;
+}
+
+.pagina img{
+    transition: 0.15s linear;
+}
+
+.pagina img:hover{
+    transform: scale(1.2);
+}
+
+.agregar-carrito{
+    background: #1c2d41;
+    color: #fff;
+    padding: 5px;
+}
+
+.carrito{
+    background: #1c2d41;
+    border-radius: 50%;
+    position: absolute; /* Posicionamiento absoluto */
+    top: 10px; /* Espacio desde la parte superior */
+    right: 18px; /* Espacio desde la derecha */
+    padding: 16px;
+}
+
+.btn-circle {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    line-height: 1;
+    padding: 0;
+    border: none;
+    outline: none;
+}
+
+.btn-blue {
+    background-color: #1c2d41;
+    color: white;
+}
+
+.btn-blue:hover {
+    background-color: #122033;
+    color: white;
+}
+
+.quantity-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+
+
+
+/* FOOTER */
+
+footer{
+    padding: 28px 180px;
+    color: #fff;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+footer .izquierda,
+footer .centro{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .derecha{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+footer a{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+footer a:hover{
+    color: #c0c0c0;
+}
+
+.icons-footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-bottom: 10px;
+}
+
+.icons-footer svg{
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+
+@media screen and (max-width: 1333px){
+    .content-1,
+    .content-2{
+        padding: 80px 60px;
+    }
+
+    footer{
+        padding: 28px 60px;
+    }
+}
+
+@media screen and (max-width: 1200px){
+    .logo img{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 992px){
+    .navbar-spec{
+        background: #212529;
+    }
+
+    .content-nav{
+        padding: 0 40px;
+    }
+
+    .content-1,
+    .content-2{
+        padding: 80px 40px;
+    }
+
+    footer{
+        padding: 28px 40px;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .content-nav{
+        padding: 0 20px;
+    }
+
+    .content-1,
+    .content-2{
+        padding: 80px 20px;
+    }
+
+    footer{
+        padding: 28px 20px;
+        grid-template-columns: 1fr 1fr;
+    }
+    footer .izquierda,
+    footer .derecha{
+        justify-content: start;
+        align-items: start;
+    }
+}
+
+@media screen and (max-width: 576px){
+    .content-nav{
+        padding: 0 10px;
+    }
+
+    .content-1,
+    .content-2{
+        padding: 80px 10px;
+    }
+
+    .content-1 h1{
+        font-size: 2.5rem;
+    }
+
+    .content-1 h3{
+        font-size: 0.95rem;
+    }
+
+    footer{
+        padding: 28px 10px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    footer .izquierda,
+    footer .derecha{
+        justify-content: center;
+        align-items: center;
+    }
+}

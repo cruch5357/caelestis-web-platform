@@ -1,0 +1,275 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caelestis Merch</title>
+    <link rel="stylesheet" href="{% static 'myapp/css/styles-merch.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark menu">
+        <div class="content-nav">
+            <div class="d-flex">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="col-xl-2 d-flex justify-content-start align-items-center logo">
+                    <a href="{% url 'index' %}">
+                        <img src="https://raw.githubusercontent.com/ant000o/imgs/main/logo-santuario.png" width="65%">
+                    </a>
+                </div>
+                <div class="col-xl-10 col-lg-12 d-flex flex-column-reverse">
+                    <div class="ms-auto w-100 d-flex justify-content-center">
+                        <div class="navbar-spec collapse navbar-collapse" id="navbarNavAltMarkup">
+                            <div>
+                                <ul class="navbar-nav">
+                                    <li class="nav-item">
+                                        <a class="nav-link" aria-current="page" href="{% url 'index' %}">Inicio</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="{% url 'animales' %}">Animales</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="{% url 'acercade' %}">Acerca de</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link active" href="{% url 'merch' %}">Merch</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="{% url 'donaciones' %}">Donaciones</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="{% url 'socio' %}">Hazte Socio</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="{% url 'contactanos' %}">Contáctanos</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="icons">
+                                <a href="https://www.youtube.com/">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: #fff;">
+                                        <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"></path>
+                                    </svg>
+                                </a>
+                                <a href="https://www.youtube.com/">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: #fff;">
+                                        <path d="M11.999 7.377a4.623 4.623 0 1 0 0 9.248 4.623 4.623 0 0 0 0-9.248zm0 7.627a3.004 3.004 0 1 1 0-6.008 3.004 3.004 0 0 1 0 6.008z"></path>
+                                        <circle cx="16.806" cy="7.207" r="1.078"></circle>
+                                        <path d="M20.533 6.111A4.605 4.605 0 0 0 17.9 3.479a6.606 6.606 0 0 0-2.186-.42c-.963-.042-1.268-.054-3.71-.054s-2.755 0-3.71.054a6.554 6.554 0 0 0-2.184.42 4.6 4.6 0 0 0-2.633 2.632 6.585 6.585 0 0 0-.419 2.186c-.043.962-.056 1.267-.056 3.71 0 2.442 0 2.753.056 3.71.015.748.156 1.486.419 2.187a4.61 4.61 0 0 0 2.634 2.632 6.584 6.584 0 0 0 2.185.45c.963.042 1.268.055 3.71.055s2.755 0 3.71-.055a6.615 6.615 0 0 0 2.186-.419 4.613 4.613 0 0 0 2.633-2.633c.263-.7.404-1.438.419-2.186.043-.962.056-1.267.056-3.71s0-2.753-.056-3.71a6.581 6.581 0 0 0-.421-2.217zm-1.218 9.532a5.043 5.043 0 0 1-.311 1.688 2.987 2.987 0 0 1-1.712 1.711 4.985 4.985 0 0 1-1.67.311c-.95.044-1.218.055-3.654.055-2.438 0-2.687 0-3.655-.055a4.96 4.96 0 0 1-1.669-.311 2.985 2.985 0 0 1-1.719-1.711 5.08 5.08 0 0 1-.311-1.669c-.043-.95-.053-1.218-.053-3.654 0-2.437 0-2.686.053-3.655a5.038 5.038 0 0 1 .311-1.687c.305-.789.93-1.41 1.719-1.712a5.01 5.01 0 0 1 1.669-.311c.951-.043 1.218-.055 3.655-.055s2.687 0 3.654.055a4.96 4.96 0 0 1 1.67.311 2.991 2.991 0 0 1 1.712 1.712 5.08 5.08 0 0 1 .311 1.669c.043.951.054 1.218.054 3.655 0 2.436 0 2.698-.043 3.654h-.011z"></path>
+                                    </svg>
+                                </a>
+                                <a href="https://www.youtube.com/">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: #fff;">
+                                        <path d="M19.633 7.997c.013.175.013.349.013.523 0 5.325-4.053 11.461-11.46 11.461-2.282 0-4.402-.661-6.186-1.809.324.037.636.05.973.05a8.07 8.07 0 0 0 5.001-1.721 4.036 4.036 0 0 1-3.767-2.793c.249.037.499.062.761.062.361 0 .724-.05 1.061-.137a4.027 4.027 0 0 1-3.23-3.953v-.05c.537.299 1.16.486 1.82.511a4.022 4.022 0 0 1-1.796-3.354c0-.748.199-1.434.548-2.032a11.457 11.457 0 0 0 8.306 4.215c-.062-.3-.1-.611-.1-.923a4.026 4.026 0 0 1 4.028-4.028c1.16 0 2.207.486 2.943 1.272a7.957 7.957 0 0 0 2.556-.973 4.02 4.02 0 0 1-1.771 2.22 8.073 8.073 0 0 0 2.319-.624 8.645 8.645 0 0 1-2.019 2.083z"></path>
+                                    </svg>
+                                </a>
+                                <a href="https://www.youtube.com/">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: #fff;">
+                                        <path d="M21.593 7.203a2.506 2.506 0 0 0-1.762-1.766C18.265 5.007 12 5 12 5s-6.264-.007-7.831.404a2.56 2.56 0 0 0-1.766 1.778c-.413 1.566-.417 4.814-.417 4.814s-.004 3.264.406 4.814c.23.857.905 1.534 1.763 1.765 1.582.43 7.83.437 7.83.437s6.265.007 7.831-.403a2.515 2.515 0 0 0 1.767-1.763c.414-1.565.417-4.812.417-4.812s.02-3.265-.407-4.831zM9.996 15.005l.005-6 5.207 3.005-5.212 2.995z"></path>
+                                    </svg>
+                                </a>
+                                {% if user.is_authenticated %}
+                                <div class="dropdown">
+                                    <a href="#" class="dropdown-toggle no-link-style text-decoration-none" id="userDropdown" data-bs-toggle="dropdown" aria-expanded="false" style="color: #fff !important;">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: #fff;">
+                                            <path d="M13 16l5-4-5-4v3H4v2h9z"></path>
+                                            <path d="M20 3h-9c-1.103 0-2 .897-2 2v4h2V5h9v14h-9v-4H9v4c0 1.103.897 2 2 2h9c1.103 0 2-.897 2-2V5c0-1.103-.897-2-2-2z"></path>
+                                        </svg>
+                                        {{ user.username }}
+                                    </a>                                        
+                                    <ul class="dropdown-menu" aria-labelledby="userDropdown">
+                                        <li>
+                                            <form id="logout-form" action="{% url 'logout' %}" method="post" style="display: inline;">
+                                                {% csrf_token %}
+                                                <button type="submit" style="background:none; border:none; padding:0; margin:0; color:#000;">
+                                                    Cerrar Sesion
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: #fff;">
+                                                        <path d="M13 16l5-4-5-4v3H4v2h9z"></path>
+                                                        <path d="M20 3h-9c-1.103 0-2 .897-2 2v4h2V5h9v14h-9v-4H9v4c0 1.103.897 2 2 2h9c1.103 0 2-.897 2-2V5c0-1.103-.897-2-2-2z"></path>
+                                                    </svg>
+                                                </button>
+                                            </form>
+                                        </li>
+                                    </ul>
+                                </div>
+                                {% else %}
+                                <a href="{% url 'login' %}">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: #fff;">
+                                        <path d="M12 2C6.579 2 2 6.579 2 12s4.579 10 10 10 10-4.579 10-10S17.421 2 12 2zm0 5c1.727 0 3 1.272 3 3s-1.273 3-3 3c-1.726 0-3-1.272-3-3s1.274-3 3-3zm-5.106 9.772c.897-1.32 2.393-2.2 4.106-2.2h2c1.714 0 3.209.88 4.106 2.2C15.828 18.14 14.015 19 12 19s-3.828-.86-5.106-2.228z"></path>
+                                    </svg>
+                                </a>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav> 
+
+    <div class="contenedor">
+        <div class="content-1">
+            <div class="d-flex justify-content-center py-4">
+                <h1>Santuario Caelestis</h1>
+            </div>
+            <div class="d-flex justify-content-center py-2">
+                <h3>¡Echa un vistazo a nuestros peluches!</h3>
+            </div>
+            <div class="d-flex justify-content-center pt-2">
+                <p><i>¡Socios cuentan con un 15% de descuento!</i></p>
+            </div>
+        </div>
+        <div class="content-2">
+            <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active" data-bs-interval="6000">
+                            <div class="row pagina">
+                                <div class="col">
+                                    <div class="peluche">
+                                        <img src="https://raw.githubusercontent.com/ant000o/imgs/main/plush1.png" class="d-block mx-auto plush" height="300px" alt="...">
+                                        <p class="d-flex w-100 justify-content-center">Monita Plush</p>
+                                        <p class="d-flex w-100 justify-content-center">$5.700</p>
+                                        <button class="agregar-carrito d-flex justify-content-center mx-auto">Agregar al carrito</button>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div>
+                                        <img src="https://raw.githubusercontent.com/ant000o/imgs/main/plush2.png" class="d-block mx-auto plush" height="300px" alt="...">
+                                        <p class="d-flex w-100 justify-content-center">Po Plush</p>
+                                        <p class="d-flex w-100 justify-content-center">$5.700</p>
+                                        <button class="agregar-carrito d-flex justify-content-center mx-auto">Agregar al carrito</button>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div>
+                                        <img src="https://raw.githubusercontent.com/ant000o/imgs/main/plush3.png" class="d-block mx-auto plush" height="300px" alt="...">
+                                        <p class="d-flex w-100 justify-content-center">Loro Plush</p>
+                                        <p class="d-flex w-100 justify-content-center">$5.700</p>
+                                        <button class="agregar-carrito d-flex justify-content-center mx-auto">Agregar al carrito</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    <div class="carousel-item" data-bs-interval="6000">
+                        <div class="row pagina">
+                            <div class="col">
+                                <div>
+                                    <img src="https://raw.githubusercontent.com/ant000o/imgs/main/plush4.png" class="d-block mx-auto plush" height="300px" alt="...">
+                                    <p class="d-flex w-100 justify-content-center">Pepito Plush</p>
+                                    <p class="d-flex w-100 justify-content-center">$5.700</p>
+                                    <button class="agregar-carrito d-flex justify-content-center mx-auto">Agregar al carrito</button>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div>
+                                    <img src="https://raw.githubusercontent.com/ant000o/imgs/main/plush5.png" class="d-block mx-auto plush" height="300px" alt="...">
+                                    <p class="d-flex w-100 justify-content-center">Nugget Plush</p>
+                                    <p class="d-flex w-100 justify-content-center">$5.700</p>
+                                    <button class="agregar-carrito d-flex justify-content-center mx-auto">Agregar al carrito</button>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div>
+                                    <img src="https://raw.githubusercontent.com/ant000o/imgs/main/plush6.png" class="d-block mx-auto plush" height="300px" alt="...">
+                                    <p class="d-flex w-100 justify-content-center">Cerdo Plush</p>
+                                    <p class="d-flex w-100 justify-content-center">$5.700</p>
+                                    <button class="agregar-carrito d-flex justify-content-center mx-auto">Agregar al carrito</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="6000">
+                        <div class="row pagina">
+                            <div class="col">
+                                <div>
+                                    <img src="https://raw.githubusercontent.com/ant000o/imgs/main/plush7.png" class="d-block mx-auto plush" height="300px" alt="...">
+                                    <p class="d-flex w-100 justify-content-center">Mapache Plush</p>
+                                    <p class="d-flex w-100 justify-content-center">$5.700</p>
+                                    <button class="agregar-carrito d-flex justify-content-center mx-auto">Agregar al carrito</button>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div>
+                                    <img src="https://raw.githubusercontent.com/ant000o/imgs/main/plush8.png" class="d-block mx-auto plush" height="300px" alt="...">
+                                    <p class="d-flex w-100 justify-content-center">Tommy Plush</p>
+                                    <p class="d-flex w-100 justify-content-center">$5.700</p>
+                                    <button class="agregar-carrito d-flex justify-content-center mx-auto">Agregar al carrito</button>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div>
+                                    <img src="https://raw.githubusercontent.com/ant000o/imgs/main/plush9.png" class="d-block mx-auto plush" height="300px" alt="...">
+                                    <p class="d-flex w-100 justify-content-center">Capybara Plush</p>
+                                    <p class="d-flex w-100 justify-content-center">$5.700</p>
+                                    <button class="agregar-carrito d-flex justify-content-center mx-auto">Agregar al carrito</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+            <button data-bs-toggle="modal" data-bs-target="#modalCarrito" class="carrito"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: #ffffff;"><path d="M21.822 7.431A1 1 0 0 0 21 7H7.333L6.179 4.23A1.994 1.994 0 0 0 4.333 3H2v2h2.333l4.744 11.385A1 1 0 0 0 10 17h8c.417 0 .79-.259.937-.648l3-8a1 1 0 0 0-.115-.921z"></path><circle cx="10.5" cy="19.5" r="1.5"></circle><circle cx="17.5" cy="19.5" r="1.5"></circle></svg></button>
+            
+        
+            <!-- Modal Carrito -->
+            <div class="modal fade" id="modalCarrito" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-scrollable">
+                    <div class="modal-content" style="background-color: #d8d7d7; color: #000;">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">Carrito</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p id="carrito-vacio" style="text-align: center;">El carrito está vacío</p>
+                            <ul class="productos" style="list-style: none;">
+                                <!-- Aquí se agregarán dinámicamente los productos -->
+                            </ul>
+                            <p style="font-size: smaller;"><i>Todos los ingresos van directamente a Santuario Caelestis</i></p>
+                        </div>
+                        <div class="modal-footer justify-content-between d-flex">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Vaciar carrito</button>
+                            <button type="button" class="btn btn-primary" id="pagar-btn" disabled><a href="{% url 'checkout-merch' %}" style="text-decoration: none; color: #fff;">Pagar</a></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--FOOTER-->
+    <footer class="bg-dark">
+        <div class="izquierda">
+            <p>© 2024 Santuario Caelestis<br>Todos los derechos reservados.<br>Creado por CaelestisTeam.</p>
+        </div>
+        <div class="centro">
+            <p><a href="{% url 'contactanos' %}">Contáctanos</a></p>
+        </div>
+        <div class="derecha">
+            <p>Visítanos en nuestras redes sociales:</p>
+            <div class="justify-content-center icons-footer">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: #fff;"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"></path></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: #fff;"><path d="M11.999 7.377a4.623 4.623 0 1 0 0 9.248 4.623 4.623 0 0 0 0-9.248zm0 7.627a3.004 3.004 0 1 1 0-6.008 3.004 3.004 0 0 1 0 6.008z"></path><circle cx="16.806" cy="7.207" r="1.078"></circle><path d="M20.533 6.111A4.605 4.605 0 0 0 17.9 3.479a6.606 6.606 0 0 0-2.186-.42c-.963-.042-1.268-.054-3.71-.054s-2.755 0-3.71.054a6.554 6.554 0 0 0-2.184.42 4.6 4.6 0 0 0-2.633 2.632 6.585 6.585 0 0 0-.419 2.186c-.043.962-.056 1.267-.056 3.71 0 2.442 0 2.753.056 3.71.015.748.156 1.486.419 2.187a4.61 4.61 0 0 0 2.634 2.632 6.584 6.584 0 0 0 2.185.45c.963.042 1.268.055 3.71.055s2.755 0 3.71-.055a6.615 6.615 0 0 0 2.186-.419 4.613 4.613 0 0 0 2.633-2.633c.263-.7.404-1.438.419-2.186.043-.962.056-1.267.056-3.71s0-2.753-.056-3.71a6.581 6.581 0 0 0-.421-2.217zm-1.218 9.532a5.043 5.043 0 0 1-.311 1.688 2.987 2.987 0 0 1-1.712 1.711 4.985 4.985 0 0 1-1.67.311c-.95.044-1.218.055-3.654.055-2.438 0-2.687 0-3.655-.055a4.96 4.96 0 0 1-1.669-.311 2.985 2.985 0 0 1-1.719-1.711 5.08 5.08 0 0 1-.311-1.669c-.043-.95-.053-1.218-.053-3.654 0-2.437 0-2.686.053-3.655a5.038 5.038 0 0 1 .311-1.687c.305-.789.93-1.41 1.719-1.712a5.01 5.01 0 0 1 1.669-.311c.951-.043 1.218-.055 3.655-.055s2.687 0 3.654.055a4.96 4.96 0 0 1 1.67.311 2.991 2.991 0 0 1 1.712 1.712 5.08 5.08 0 0 1 .311 1.669c.043.951.054 1.218.054 3.655 0 2.436 0 2.698-.043 3.654h-.011z"></path></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: #fff;"><path d="M19.633 7.997c.013.175.013.349.013.523 0 5.325-4.053 11.461-11.46 11.461-2.282 0-4.402-.661-6.186-1.809.324.037.636.05.973.05a8.07 8.07 0 0 0 5.001-1.721 4.036 4.036 0 0 1-3.767-2.793c.249.037.499.062.761.062.361 0 .724-.05 1.061-.137a4.027 4.027 0 0 1-3.23-3.953v-.05c.537.299 1.16.486 1.82.511a4.022 4.022 0 0 1-1.796-3.354c0-.748.199-1.434.548-2.032a11.457 11.457 0 0 0 8.306 4.215c-.062-.3-.1-.611-.1-.923a4.026 4.026 0 0 1 4.028-4.028c1.16 0 2.207.486 2.943 1.272a7.957 7.957 0 0 0 2.556-.973 4.02 4.02 0 0 1-1.771 2.22 8.073 8.073 0 0 0 2.319-.624 8.645 8.645 0 0 1-2.019 2.083z"></path></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: #fff;"><path d="M21.593 7.203a2.506 2.506 0 0 0-1.762-1.766C18.265 5.007 12 5 12 5s-6.264-.007-7.831.404a2.56 2.56 0 0 0-1.766 1.778c-.413 1.566-.417 4.814-.417 4.814s-.004 3.264.406 4.814c.23.857.905 1.534 1.763 1.765 1.582.43 7.83.437 7.83.437s6.265.007 7.831-.403a2.515 2.515 0 0 0 1.767-1.763c.414-1.565.417-4.812.417-4.812s.02-3.265-.407-4.831zM9.996 15.005l.005-6 5.207 3.005-5.212 2.995z"></path></svg>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="{% static 'myapp/js/script-merch.js' %}"></script>
+</body>
+</html>

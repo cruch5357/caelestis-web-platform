@@ -1,0 +1,148 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="{% static 'myapp/css/styles-checkout.css' %}">
+</head>
+<body>
+
+    <div class="container">
+        <div class="gray">
+            <div>
+                <a href="{% url 'socio' %}">
+                    <svg class="flecha" xmlns="http://www.w3.org/2000/svg" width="62" height="62" viewBox="0 0 34 34" style="fill: #ffffff;"><path d="M13.293 6.293 7.586 12l5.707 5.707 1.414-1.414L10.414 12l4.293-4.293z"></path></svg>
+                </a>
+            </div>
+
+            <div class="pago">
+                <h1>Datos del pago</h1>
+                <form id="checkoutForm" action="" method="post">
+                    <div>
+                        <h2 class="t-pago">Elige cómo quieres pagar</h2>
+                        <p>Puedes pagar el precio establecido o decidir pagar más.</p>
+                    </div>
+                    <div class="metodo">
+                        <div class="tipo">
+                            <label>Mensual</label>
+                            <input type="radio" class="radio" name="tipoPago" value="mensual" checked>
+                        </div>
+                        <div class="precio">
+                            <p id="precioMensual"></p>
+                        </div>
+                    </div>
+
+                    <div class="metodo">
+                        <div class="tipo">
+                            <label>Anual (Ahorra un 20%)</label>
+                            <input type="radio" class="radio" name="tipoPago" value="anual">
+                        </div>
+                        <div class="precio">
+                            <p id="precioAnual"></p>
+                        </div>
+                    </div>
+
+                    <h2 class="t-metodo">Método de pago</h2>
+                    <div class="tarjeta" >
+                        <div class="metodo" id="tarjetaDiv">
+                            <input id="tarjeta" type="radio" class="radio" name="metodoPago" value="tarjeta" checked>
+                            <label for="tarjeta">Tarjeta</label>
+                        </div>
+                        <div class="metodo" id="paypalDiv">
+                            <input id="paypal" type="radio" class="radio" name="metodoPago" value="paypal">
+                            <label for="paypal">Paypal</label>
+                        </div>
+                    </div> 
+
+
+                    <div id="datosTarjetaContainer">
+                        <div>
+                            <h4>Nombre en la tarjeta</h4>
+                            <div class="border">
+                                <input type="text" id="nombreTarjeta" name="nombreTarjeta" required>
+                            </div>
+                        </div>
+                        <div>
+                            <h4>Números de la tarjeta</h4>
+                            <div class="border">
+                                <input type="text" id="numeroTarjeta" name="numeroTarjeta" placeholder="Número de tarjeta" required>
+                            </div>
+                        </div>
+                        <div>
+                            <h4>Fecha de expiración</h4>
+                            <div class="border">
+                                <input type="text" id="expiracion" name="expiracion" placeholder="MM / AA" pattern="\d{2}\/\d{2}" required>
+                            </div>
+                        </div>
+                        <div>
+                            <h4>CVV</h4>
+                            <div class="border">
+                                <input type="text" id="cvv" name="cvv" placeholder="CVV" pattern="\d{3}" required>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit">Pagar</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="beige">
+            <div class="producto">
+                <h2>Resumen de la orden</h2>
+                <section class="dina">
+                    <div class="imagen-socio">
+                        <div>
+                            <img src="https://raw.githubusercontent.com/ant000o/imgs/main/logo-santuario.png" alt="Logo Santuario" style="height: 70px;">
+                        </div>
+                        <div>
+                            <h3>Santuario Caelestis</h3>
+                            <p id="nombreMembresia"></p>
+                        </div>
+                    </div>
+                    <div class="pago-impuestos">
+                        <div>
+                            <p>Precio</p>
+                            <p>Impuestos</p>
+                        </div>
+                        <div>
+                            <p id="precioMembresia"></p>
+                            <p id="impuesto"></p>
+                        </div>
+                    </div>
+                    <div class="total">
+                        <div>
+                            <p>Total a pagar</p>
+                            <p id="totalPagar"></p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div></div>
+        </div>
+    </div>
+
+
+    <!-- Modal -->
+    <div id="modalBoleta" class="modal">
+        <div class="modal-content">
+            <a href="{% url 'socio' %}">
+                <span class="close">&times;</span>
+            </a>
+            <div>
+                <h2>¡Compra exitosa!</h2>
+                <h3 style="margin-bottom: 6px;">Boleta de compra</h3>
+            </div>
+            <div id="detalleCompra"></div>
+        </div>
+    </div>
+
+    <!-- Elemento oculto para el nombre de usuario -->
+    <input type="hidden" id="nombreUsuario" value="{{ user.username }}">
+
+
+
+    <script src="{% static 'myapp/js/script-checkout-s.js' %}"></script>
+</body>
+</html>

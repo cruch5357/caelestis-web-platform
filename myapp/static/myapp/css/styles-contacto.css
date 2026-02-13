@@ -1,0 +1,243 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar-spec{
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+nav{
+    height: 100px;
+    background: #00000054;
+}
+
+nav li{
+    padding: 0 10px;
+}
+
+.content-nav{
+    padding: 0 180px;
+    height: 100%;
+    width: 100%;
+}
+
+.icons{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #fff;
+    width: 100%;
+}
+
+.icons svg{
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.modal{
+    color: #fff;
+}
+
+.modal-body > div{
+    padding-top: 20px;
+}
+
+.error {
+    color: red;
+    display: none;
+}   
+
+.foto {
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    width: 100%;
+    height: 100%;
+    --animation: cambiar-foto 18s infinite;
+    --animation-timing-function: ease-in;
+}
+
+.modal-body > div{
+    padding-top: 20px;
+}
+
+.contenedor{
+    height: calc(100vh - 100px);
+}
+
+.contenido{
+    height: 100%;
+}
+
+
+
+/*Contenido Contacto*/
+
+/* Estilos para el contenedor principal */
+.content-1 {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.357) 0%, rgba(0, 0, 0, 0.357)100%), url(../img/fondo-hojas.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 40px 20px;
+    color: #fff;
+}
+
+/* Ajustes para el formulario de contacto */
+.formulario-contacto {
+    margin-top: 2%;
+    margin-bottom: 5%;
+    background-color: #00000091;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Estilos para los enlaces dentro del formulario */
+.formulario-contacto a {
+    text-decoration: none;
+    color: #ffffff;
+    padding: 12px;
+    border-radius: 12px;
+    background-color: #706c6cd7;
+}
+
+/* Utilizando el grid de Bootstrap para responsividad */
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 15px;
+}
+
+@media (min-width: 576px) {
+    .content-1 {
+        padding: 60px 40px;
+    }
+}
+
+@media (min-width: 768px) {
+    .content-1 {
+        padding: 80px 60px;
+    }
+}
+
+@media (min-width: 992px) {
+    .content-1 {
+        padding: 80px 100px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .content-1 {
+        padding: 80px 180px;
+    }
+}
+
+/* FOOTER */
+
+footer{
+    padding: 28px 180px;
+    color: #fff;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+footer .izquierda,
+footer .centro{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .derecha{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+footer a{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+footer a:hover{
+    color: #c0c0c0;
+}
+
+.icons-footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-bottom: 10px;
+}
+
+.icons-footer svg{
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+
+@media screen and (max-width: 1333px){
+    footer{
+        padding: 28px 60px;
+    }
+}
+
+@media screen and (max-width: 1200px){
+    .logo img{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 992px){
+    .navbar-spec{
+        background: #212529;
+    }
+
+    .content-nav{
+        padding: 0 40px;
+    }
+
+    footer{
+        padding: 28px 40px;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .content-nav{
+        padding: 0 20px;
+    }
+
+    footer{
+        padding: 28px 20px;
+        grid-template-columns: 1fr 1fr;
+    }
+    footer .izquierda,
+    footer .derecha{
+        justify-content: start;
+        align-items: start;
+    }
+}
+
+@media screen and (max-width: 576px){
+    .content-nav{
+        padding: 0 10px;
+    }
+
+    footer{
+        padding: 28px 10px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    footer .izquierda,
+    footer .derecha{
+        justify-content: center;
+        align-items: center;
+    }
+}

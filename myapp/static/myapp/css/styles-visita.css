@@ -1,0 +1,246 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar-spec{
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+nav{
+    height: 100px;
+    background: #00000054;
+}
+
+nav li{
+    padding: 0 10px;
+}
+
+.content-nav{
+    padding: 0 180px;
+    height: 100%;
+    width: 100%;
+}
+
+.icons{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #fff;
+    width: 100%;
+}
+
+.icons svg{
+    margin: 0 10px;
+}
+
+.modal{
+    --color: #fff;
+}
+
+.modal-body > div{
+    padding-top: 20px;
+}
+
+.fondo {
+    background-color: #ffffff00;
+    padding-bottom: 50px; /* Agrega espacio al final para que no se superponga el contenido */
+}
+
+.contenedor-animal {
+    background: #135864;
+    padding: 70px 15px;
+    --margin-top: 1%;
+    margin-bottom: 3%;
+    --background-image: url(../img/fondo-hojas.jpg);
+}
+
+.contenedor-info-animal{
+    background-image: url(../img/fondo-hojas.jpg);
+}
+
+.contenedor-boton{
+    text-decoration: none;
+    color: #ffffff !important;
+    margin-bottom: 20px;
+    padding: 12px;
+    border-radius: 12px;
+    background-color: #14213bd7 !important;
+}
+
+
+.contenedor-animal h1 {
+    font-family: 'Times New Roman', serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.info-animal .card {
+    background: transparent;
+    color: #000000;
+    border: none;
+    text-align: center; 
+}
+
+.info-animal .card h5,.info-animal .card p{
+    text-align: center  !important;
+}
+
+.info-animal .card-img-top {
+    border-radius: 20px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+    height: 250px;
+}
+
+
+.info-animal .card-img-top:hover {
+    transform: translateY(-10px);
+}
+
+.contenedor .btn-modal{
+    text-decoration: none;
+    color: #ffffff;
+    padding: 12px;
+    border-radius: 12px;
+    background-color: #706c6cd7;
+}
+
+
+.spinner {
+    display: none;
+    width: 3rem;
+    height: 3rem;
+    border: 0.3em solid rgba(0, 0, 0, 0.2);
+    border-top: 0.3em solid #007bff;
+    border-radius: 50%;
+    animation: spin 0.6s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/*info Mascotas*/
+
+.contenedor {
+    --display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.card {
+    flex: 1 1 calc(100% / 7 - 10px); /* Esto distribuirá las tarjetas equitativamente */
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+/* FOOTER */
+
+footer{
+    padding: 28px 180px;
+    color: #fff;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+footer .izquierda,
+footer .centro{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .derecha{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+footer a{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+footer a:hover{
+    color: #c0c0c0;
+}
+
+.icons-footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-bottom: 10px;
+}
+
+.icons-footer svg{
+    margin: 0 10px;
+}
+
+
+@media screen and (max-width: 1333px){
+    footer{
+        padding: 28px 60px;
+    }
+}
+
+@media screen and (max-width: 1200px){
+    .logo img{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 992px){
+    .navbar-spec{
+        background: #212529;
+    }
+
+    .content-nav{
+        padding: 0 40px;
+    }
+
+    footer{
+        padding: 28px 40px;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .content-nav{
+        padding: 0 20px;
+    }
+
+    footer{
+        padding: 28px 20px;
+        grid-template-columns: 1fr 1fr;
+    }
+    footer .izquierda,
+    footer .derecha{
+        justify-content: start;
+        align-items: start;
+    }
+}
+
+@media screen and (max-width: 576px){
+    .content-nav{
+        padding: 0 10px;
+    }
+
+    footer{
+        padding: 28px 10px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    footer .izquierda,
+    footer .derecha{
+        justify-content: center;
+        align-items: center;
+    }
+}
